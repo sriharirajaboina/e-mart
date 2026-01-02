@@ -1,0 +1,131 @@
+html{
+    font-size:16px;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Courier New', Courier, monospace;
+
+}
+body{
+    background-color: aliceblue;
+}
+.navSection{
+    border:1px solid black;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    background-color: black;
+    color: white;
+    height:80px;
+    font-size:1.5rem;
+    font-weight: bold;
+}
+.user{
+    display:flex;
+    gap:20px;
+}
+.search{
+    border-radius:20px;
+    display:flex;
+    align-items: center;
+    padding:10px;
+    background-color: white;
+    color: black;
+}
+.subMenu {
+    background:gray;
+    color:white;
+    padding:1rem;
+   
+}
+.subMenu ul li{
+    list-style: none;
+}
+.subMenu ul {
+    display:inline-flex;
+    gap:1.2rem;
+    font-size:1.5rem;
+    font-weight:bold;
+
+}
+.proSection{
+    display:flex;
+    background-color: white;
+    padding:10px;
+}
+.imgBox{
+    width:80%;
+    height:80%;
+    padding-left:20px;
+}
+.proImage{
+    width:80%;
+    height:90%;
+}
+.proTitle{
+    font-size:2rem;
+    font-weight: bold;
+    margin:20px;
+}
+.pageSection{
+    display:grid;
+    grid-template-columns: repeat(4,330px);
+    gap:10px;
+    margin:20px;
+
+}
+.pageImg{
+    width:350px;  
+}
+.proImg img{
+    width:100%;
+}
+.mobile-details{
+    font-size:1rem;
+    font-weight:bold;
+}
+.ind-section{
+    display:flex;
+}
+.ind-img{
+    width:400px;
+    height:500px;
+    margin:20px;
+}
+.ind-img img{
+    width:100%;
+}
+.ind-details{
+    font-size:1.5rem;
+    font-weight:bold;
+}
+.space{
+    margin:20px;
+}
+.ind-desc{
+    font-size:1rem;
+}
+.ind-details button{
+    
+    padding:8px;
+    border-radius:10px;
+    background-color: orangered;
+    color: white;
+    font-size:1rem;
+    cursor: pointer;
+}
+.full-page{
+    display:flex;
+}
+.pro-selected{
+    width:30%;
+    
+    border: 2px solid black;
+}
+.pro-input{
+    margin:5px;
+    font-weight: bold;
+}
