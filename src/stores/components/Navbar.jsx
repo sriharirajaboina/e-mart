@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
 
 const Navbar = () => {
+    const {cartItems} = useCart();
   return (
     <>
         <div className="navSection">
@@ -18,9 +20,12 @@ const Navbar = () => {
                 <div className="user-details">
                     Signup/SignIn
                 </div>
-                <div className="cart">
-                    Cart
-                </div>
+                <Link to="/cart">
+                     <div className="cart">
+                        Cart&nbsp;
+                        <span>{cartItems.length}</span>
+                    </div>
+                </Link>
             </div>
         </div>
         <div className="subMenu">
@@ -28,17 +33,36 @@ const Navbar = () => {
                 <Link to="/mobiles">
                     <li>Mobiles</li>
                 </Link>
-                <li>Computers</li>
-                <li>Watches</li>
-                <li>Men Fashions</li>
-                <li>Woman Dressing</li>
-                <li>Furniture</li>
-                <li>Ac</li>
-                <li>Kitchen</li>
-                <li>Fridges</li>
-                <li>Speakers</li>
-                <li>AC</li>
-                <li>Tv's</li>
+                <Link to="/computers">
+                    <li>Computers</li>
+                </Link>
+                <Link to="/watches">
+                    <li>Watches</li>
+                </Link>  
+                <Link to="/mens">
+                     <li>Men Fashions</li>
+                </Link>
+                <Link to="/woman">
+                    <li>Woman Dressing</li>
+                </Link>
+                <Link to="/furniture">
+                    <li>Furniture</li>
+                </Link>
+                <Link to="/ac">
+                    <li>Ac</li>
+                </Link>
+                <Link to="/kitchen">
+                    <li>Kitchen</li>
+                </Link>
+                <Link to="/fridges">
+                    <li>Fridges</li>
+                </Link>
+                <Link to="/speakers">
+                     <li>Speakers</li>
+                </Link>
+                <Link to="/tv">
+                    <li>Tv's</li>
+                </Link>
             </ul>
         </div>
     </>
