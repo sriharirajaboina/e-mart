@@ -5,7 +5,7 @@ const SignUp = () => {
     const navigate=useNavigate();
     const handleSubmit=(e)=>{
         e.preventDefault();
-        navigate("/")
+        navigate("/home")
     }
   return (
     <>

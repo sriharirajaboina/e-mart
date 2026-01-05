@@ -5,7 +5,7 @@ const SignIn = () => {
     const navigate=useNavigate();
     const handleSubmit=(e)=>{
         e.preventDefault();
-        navigate("/");
+        navigate("/home");
     }
   return (
     <div className="login-form">
