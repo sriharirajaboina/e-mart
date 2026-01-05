@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import { acData } from '../data/ac'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const AcPage = () => {
   const [selectedAc,setSelectedAc]=useState([]);
@@ -37,12 +38,14 @@ const AcPage = () => {
               filteredAcProducts.map((acs)=>{
                 return(
                   <div>
-                    <div className="pageImg">
+                    <Link to={`/ac/${acs.id}`}>
+                      <div className="pageImg">
                       <img src={acs.image} alt="woman-images" />
                     </div>
                     <div className="mobile-details">
                       {acs.company},{acs.model}
                     </div>
+                    </Link>
                   </div>
                 )
               })

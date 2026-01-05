@@ -2,9 +2,11 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { menData } from '../stores/data/mens';
 import Navbar from '../stores/components/Navbar';
+import { useCart } from '../stores/context/CartContext';
 
 const MenSingle = () => {
     const {id} = useParams();
+    const {addToCart} = useCart();
     const mensProduct=menData.find((items)=> items.id === id);
   return (
     <>
@@ -28,7 +30,7 @@ const MenSingle = () => {
                         {mensProduct.description}
                     </p>
                 </div>
-                <button >Add to Cart</button>
+                <button onClick={()=>addToCart(mensProduct)}>Add to Cart</button>
             </div> 
         </div>
     </>

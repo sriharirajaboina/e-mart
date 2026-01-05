@@ -18,6 +18,16 @@ import SpeakerPage from './stores/pages/SpeakerPage'
 import TvPage from './stores/pages/TvPage'
 import WatchSingle from './single/WatchSingle'
 import MenSingle from './single/MenSingle'
+import WomanSingle from './single/WomanSingle'
+import FurnitureSingle from './single/FurnitureSingle'
+import AcSingle from './single/AcSingle'
+import FridgeSingle from './single/FridgeSingle'
+import KitchenSingle from './single/KitchenSingle'
+import TcSingle from './single/TcSingle'
+import SpeakerSingle from './single/SpeakerSingle'
+import SignUp from './signForm/SignUp'
+import SignIn from './signForm/SignIn'
+
 
 function App() {
 
@@ -26,6 +36,8 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={ <LandingPage/>} />
+          <Route path="/signup" element={<SignUp/>} />
+          <Route path="/signin" element={<SignIn/>} />
           <Route path="/mobiles" element={<MobilePage/>} />
             <Route path="/mobiles/:id" element={<MobileSingle/>}/>
           <Route path="/computers" element={<ComputerPage/>}/>
@@ -35,12 +47,19 @@ function App() {
           <Route path="/mens" element={<MensPage/>} />
             <Route path="/menswere/:id" element={<MenSingle/>} />
           <Route path="/woman" element={<WomanPage/>} />
+            <Route path="/woman/:id" element={<WomanSingle/>}/>
           <Route path="/furniture" element={<FurniturePage/>} />
+            <Route path="/furniture/:id" element={<FurnitureSingle/>}/>
           <Route path="/ac" element={<AcPage/>} />
+            <Route path="/ac/:id" element={<AcSingle/>}/>
           <Route path="/kitchen" element={<KitchenPage/>} />
+            <Route path="/kitchen/:id" element={<KitchenSingle/>} />
           <Route path="/fridges" element={<FridgePage/>} />
+            <Route path="/fridge/:id" element={<FridgeSingle/>} />
           <Route path="/speakers" element={<SpeakerPage/>} />
-          <Route path="/tv" element={TvPage} />
+            <Route path="/speakers/:id" element={<SpeakerSingle/>} />
+          <Route path="/tv" element={<TvPage/>} />
+            <Route path="/tv/:id" element={<TcSingle/>} />
             <Route path="/cart" element={<UserCart/>}/>
         </Routes>
        

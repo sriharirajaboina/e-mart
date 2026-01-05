@@ -4,6 +4,10 @@ import { useCart } from '../context/CartContext';
 
 const Navbar = () => {
     const {cartItems} = useCart();
+    const cartCount = cartItems.reduce(
+  (total, item) => total + item.quantity,
+  0
+);
   return (
     <>
         <div className="navSection">
@@ -18,12 +22,17 @@ const Navbar = () => {
             </div>
             <div className="user">
                 <div className="user-details">
-                    Signup/SignIn
+                    <Link to="/signup">
+                        <span>SignUp</span>
+                    </Link>
+                     <Link to="/signin">
+                        <span>/SignIn</span>
+                    </Link>
                 </div>
                 <Link to="/cart">
                      <div className="cart">
                         Cart&nbsp;
-                        <span>{cartItems.length}</span>
+                        <span>{ cartCount}</span>
                     </div>
                 </Link>
             </div>

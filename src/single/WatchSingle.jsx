@@ -2,9 +2,11 @@ import React from 'react'
 import { watchData } from '../stores/data/watches'
 import { useParams } from 'react-router-dom'
 import Navbar from '../stores/components/Navbar'
+import { useCart } from '../stores/context/CartContext'
 
 const WatchSingle = () => {
     const {id} = useParams();
+    const {addToCart} = useCart();
     const watchProduct= watchData.find((items)=>items.id  === id)
   return (
     <>
@@ -28,7 +30,7 @@ const WatchSingle = () => {
                         {watchProduct.description}
                     </p>
                 </div>
-                <button>Add to Cart</button>
+                <button onClick={()=>addToCart(watchProduct)}>Add to Cart</button>
           </div>
         </div>
     </>

@@ -151,3 +151,140 @@ body{
     font-size:1rem;
     font-weight:bold;
 }
+.quantity{
+    border:1px solid black;
+    padding:5px;
+}
+.decrement,.increment,.counts{
+    padding:5px;
+    cursor: pointer;
+}
+.signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: blue;
+   
+}
+.signup-forms{
+    background-color:white;
+    padding:50px 40px;
+    border-radius: 30px;;
+}
+.signup-title{
+    padding:20px;
+    text-align: center;
+}
+.login{
+    text-decoration: underline;
+    color: blue;
+}
+.signup-title h2{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.userUse{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding:20px 0px;
+   
+}
+.signup-form{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.signup-form label {
+  display: block;
+  width: 100%;
+}
+.signup-form input,
+.signup-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-sizing: border-box; 
+}
+.round{
+    width: 20px;
+  height: 15px;
+  border-radius: 50%;
+  accent-color: red;
+}
+
+.link{
+    background-color: blue;
+    text-align: center;
+    padding:10px;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.3rem;
+}
+.links{
+    text-align: center;
+    font-size:0.9rem;
+    padding:10px;
+}
+.google,.facebook{
+    text-decoration: underline;
+    color:red
+}
+.email,.password,.country{
+    padding:10px;
+}
+.login-form{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.login-box{
+    width:400px;
+    height:400px;
+    background-color:white;
+    border-radius: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;  
+}
+.login-box h2{
+    text-align: center;
+    font-size: 3rem;
+    color:black;
+}
+.input-box{padding:10px;}
+.input-box input{
+    border:1px solid black;
+    border-radius: 7px;
+    padding:5px;
+    
+}
+.input-box label{
+    width:100%;
+    display:block;
+}
+.input-box input{
+    width:100%;
+}
+.login-box button{
+    background-color: blue;
+    padding:10px;
+    border-radius: 10px;
+    width:100%;
+}
+.register{
+    padding:10px;
+}
+.register a{
+    text-decoration: underline;
+    color:blue
+}
+.remember-forgot{
+    display:flex;
+    justify-content: space-between;
+    padding:10px;
+}

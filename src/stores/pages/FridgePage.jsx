@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import Navbar from '../components/Navbar'
 import {fridgeData} from "../data/fridge"
+import { Link } from 'react-router-dom';
 const FridgePage = () => {
   const [selectedFridge,setSelectedFridge] = useState([]);
   const companyHandler=(refridge)=>{
@@ -36,12 +37,15 @@ const filteredFridge=selectedFridge.length === 0 ? fridgeData : fridgeData.filte
             filteredFridge.map((fridges)=>{
               return(
                 <div>
-                  <div className="pageImg">
+                  <Link to={`/fridge/${fridges.id}`}>
+                      <div className="pageImg">
                     <img src={fridges.image} alt="fridge"/>
                   </div>
                   <div className="mobile-details">
                     {fridges.brand},{fridges.model}
                   </div>
+                  </Link>
+                  
                 </div>
               )
             })

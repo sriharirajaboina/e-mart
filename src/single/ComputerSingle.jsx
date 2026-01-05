@@ -2,9 +2,12 @@ import React from "react";
 import Navbar from "../stores/components/Navbar";
 import { computerData } from "../stores/data/computers";
 import { useParams } from "react-router-dom";
+import { useCart } from "../stores/context/CartContext";
 
 const ComputerSingle = () => {
   const { id } = useParams();
+
+  const {addToCart} = useCart();
 
   const computerProduct = computerData.find(
     (item) => item.id === id
@@ -47,7 +50,7 @@ const ComputerSingle = () => {
                         {computerProduct.description}
                     </p>
                 </div>
-                <button>Add to Cart</button>
+                <button onClick={()=>addToCart(computerProduct)}>Add to Cart</button>
           </div>
         </div>
     </>
