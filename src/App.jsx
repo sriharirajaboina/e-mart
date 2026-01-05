@@ -4,7 +4,7 @@ import {Routes,Route} from "react-router-dom"
 import LandingPage from "./stores/pages/LandingPage"
 import MobilePage from './stores/pages/MobilePage'
 import MobileSingle from './single/MobileSingle'
-import UserCart from './stores/userCart'
+import UserCart from "./stores/UserCart"
 import ComputerPage from './stores/pages/ComputerPage'
 import ComputerSingle from './single/ComputerSingle'
 import WatchPages from "./stores/pages/WatchPages"
