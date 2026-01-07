@@ -35,8 +35,8 @@ function App() {
     <>
       <div>
         <Routes>
-          <Route path="/" element={<SignUp/>} />
-          <Route path="/home" element={ <LandingPage/>} />
+          <Route path="/signup" element={<SignUp/>} />
+          <Route path="/" element={ <LandingPage/>} />
           
           <Route path="/signin" element={<SignIn/>} />
           <Route path="/mobiles" element={<MobilePage/>} />

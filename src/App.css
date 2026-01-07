@@ -1,290 +1,386 @@
-html{
-    font-size:16px;
+/* =======================
+   GLOBAL STYLES
+======================= */
+html {
+  font-size: 16px;
 }
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Courier New', Courier, monospace;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
 }
-body{
-    background-color: aliceblue;
+
+body {
+  background-color: aliceblue;
 }
-.navSection{
-    border:1px solid black;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:10px;
-    background-color: black;
-    color: white;
-    height:80px;
-    font-size:1.5rem;
-    font-weight: bold;
+
+/* =======================
+   NAVBAR
+======================= */
+.navSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  height: 80px;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-.user{
-    display:flex;
-    gap:20px;
+
+.user {
+  display: flex;
+  gap: 20px;
 }
-.search{
-    border-radius:20px;
-    display:flex;
-    align-items: center;
-    padding:10px;
-    background-color: white;
-    color: black;
+
+.search {
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  color: black;
 }
+
+/* =======================
+   SUB MENU
+======================= */
 .subMenu {
-    background:gray;
-    color:white;
-    padding:1rem;
-   
+  background: gray;
+  color: white;
+  padding: 1rem;
+   width: 100%;
 }
-.subMenu ul li{
-    list-style: none;
-}
+
 .subMenu ul {
-    display:inline-flex;
-    gap:1.2rem;
-    font-size:1.5rem;
-    font-weight:bold;
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  justify-content: center;
+}
 
+.subMenu ul li {
+  list-style: none;
+  white-space: nowrap; 
 }
-.proSection{
-    display:flex;
-    background-color: white;
-    padding:10px;
-}
-.imgBox{
-    width:80%;
-    height:80%;
-    padding-left:20px;
-}
-.proImage{
-    width:80%;
-    height:90%;
-}
-.proTitle{
-    font-size:2rem;
-    font-weight: bold;
-    margin:20px;
-}
-.pageSection{
-    display:grid;
-    grid-template-columns: repeat(4,330px);
-    gap:10px;
-    margin:20px;
 
+/* =======================
+   PRODUCT SECTION
+======================= */
+.full-page {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
 }
-.pageImg{
-    width:350px;  
+.pro-selected {
+  width: 25%;
+  min-width: 220px;
+  font-weight: bold;
+  padding: 10px;
 }
-.proImg img{
-    width:100%;
+.proSection {
+  display: flex;
+  flex-wrap: no-wrap;
+  gap: 20px;
+  overflow-x: auto; /* allows horizontal scrolling if too wide */
+  padding: 10px;
 }
-.mobile-details{
-    font-size:1rem;
-    font-weight:bold;
+
+.imgBox {
+  width: 50%;
 }
-.ind-section{
-    display:flex;
-}
-.ind-img{
-    width:400px;
-    height:500px;
-    margin:20px;
-}
-.ind-img img{
-    width:100%;
-}
-.ind-details{
-    font-size:1.5rem;
-    font-weight:bold;
-}
-.space{
-    margin:20px;
-}
-.ind-desc{
-    font-size:1rem;
-}
-.ind-details button{
-    
-    padding:8px;
-    border-radius:10px;
-    background-color: orangered;
-    color: white;
-    font-size:1rem;
-    cursor: pointer;
-}
-.full-page{
-    display:flex;
-}
-.pro-selected{
-    width:30%;
-    
-    border: 2px solid black;
-}
-.pro-input{
-    margin:5px;
-    font-weight: bold;
-}
-.cart-section{
-    display:flex;
-    align-items: center;
-    margin: 20px;
-    padding:20px;
-    border: 1px solid black;
-    justify-content: space-around;
-}
-.cart-img{
-    width:100px;
-}
-.cart-details{
-    font-size:1.5rem;
-    font-weight: bold;
-}
-.cart-section button{
-    background-color: red;
-    padding:10px;
-    color:white;
-    font-size:1rem;
-    font-weight:bold;
-}
-.quantity{
-    border:1px solid black;
-    padding:5px;
-}
-.decrement,.increment,.counts{
-    padding:5px;
-    cursor: pointer;
-}
-.signup{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: blue;
-   
-}
-.signup-forms{
-    background-color:white;
-    padding:50px 40px;
-    border-radius: 30px;;
-}
-.signup-title{
-    padding:20px;
-    text-align: center;
-}
-.login{
-    text-decoration: underline;
-    color: blue;
-}
-.signup-title h2{
-    font-size: 2rem;
-    font-weight: bold;
-}
-.userUse{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding:20px 0px;
-   
-}
-.signup-form{
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-.signup-form label {
-  display: block;
+
+.proImage {
   width: 100%;
 }
+
+.proTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px;
+}
+
+/* =======================
+   PRODUCT GRID
+======================= */
+.pageSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin: 20px;
+}
+
+.pageImg,
+.proImg img {
+  width: 100%;
+}
+
+.mobile-details {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* =======================
+   INDIVIDUAL PRODUCT
+======================= */
+.ind-section {
+  display: flex;
+  gap: 20px;
+}
+
+.ind-img {
+  width: 400px;
+}
+
+.ind-img img {
+  width: 100%;
+}
+
+.ind-details {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.space {
+  margin: 20px;
+}
+
+.ind-desc {
+  font-size: 1rem;
+}
+
+.ind-details button {
+  padding: 8px;
+  border-radius: 10px;
+  background-color: orangered;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* =======================
+   CART
+======================= */
+.cart-section {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  justify-content: space-between;
+}
+
+.cart-img {
+  width: 100px;
+}
+
+.cart-details {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cart-section button {
+  background-color: red;
+  padding: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.quantity {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.decrement,
+.increment,
+.counts {
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* =======================
+   SIGNUP
+======================= */
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: blue;
+}
+
+.signup-forms {
+  background-color: white;
+  padding: 40px;
+  border-radius: 30px;
+  width: 400px;
+}
+
+.signup-title {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.signup-title h2 {
+  font-size: 1.9rem;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .signup-form input,
 .signup-form select {
   width: 100%;
   padding: 12px;
   border: 1px solid black;
   border-radius: 10px;
-  box-sizing: border-box; 
-}
-.round{
-    width: 20px;
-  height: 15px;
-  border-radius: 50%;
-  accent-color: red;
 }
 
-.link{
-    background-color: blue;
-    text-align: center;
-    padding:10px;
-    border-radius: 50px;
-    color: white;
-    font-size: 1.3rem;
+.link {
+  background-color: blue;
+  text-align: center;
+  padding: 10px;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.2rem;
 }
-.links{
-    text-align: center;
-    font-size:0.9rem;
-    padding:10px;
+
+/* =======================
+   LOGIN
+======================= */
+.login-form {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-.google,.facebook{
-    text-decoration: underline;
-    color:red
+
+.login-box {
+  width: 400px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
 }
-.email,.password,.country{
-    padding:10px;
+
+.login-box h2 {
+  text-align: center;
+  font-size: 2.5rem;
 }
-.login-form{
-    background-color: blue;
-    display: flex;
-    justify-content: center;
+
+.input-box {
+  padding: 10px 0;
+}
+
+.input-box input {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 8px;
+}
+
+.login-box button {
+  background-color: blue;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  color: white;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+/* =======================
+   RESPONSIVE - TABLET
+======================= */
+@media (max-width: 1024px) {
+  .proSection,
+  .ind-section {
+    display:flex;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+  }
+
+  .ind-img {
+    width: 90%;
+  }
+
+  .cart-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+   .pro-selected {
+    width: 30%;
+  }
+   .pageSection {
+    width: 70%;
+  }
 }
-.login-box{
-    width:400px;
-    height:400px;
-    background-color:white;
-    border-radius: 20px;
-    display:flex;
-    justify-content: center;
-    align-items: center;  
-}
-.login-box h2{
+
+/* =======================
+   RESPONSIVE - MOBILE
+======================= */
+@media (max-width: 768px) {
+  .navSection {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
     text-align: center;
-    font-size: 3rem;
-    color:black;
+  }
+   .full-page {
+    flex-direction: column;
+  }
+  .pro-selected {
+    width: 100%;
+  }
+    .pageSection {
+    width: 100%;
+  }
+
+  .user {
+    flex-direction: column;
+  }
+
+  .subMenu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .signup-forms,
+  .login-box {
+    width: 90%;
+  }
 }
-.input-box{padding:10px;}
-.input-box input{
-    border:1px solid black;
-    border-radius: 7px;
-    padding:5px;
-    
-}
-.input-box label{
-    width:100%;
-    display:block;
-}
-.input-box input{
-    width:100%;
-}
-.login-box button{
-    background-color: blue;
-    padding:10px;
-    border-radius: 10px;
-    width:100%;
-}
-.register{
-    padding:10px;
-}
-.register a{
-    text-decoration: underline;
-    color:blue
-}
-.remember-forgot{
-    display:flex;
-    justify-content: space-between;
-    padding:10px;
+
+/* =======================
+   SMALL MOBILE
+======================= */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+    .proSection,
+  .ind-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .login-box h2 {
+    font-size: 2rem;
+  }
+
+  .proTitle {
+    font-size: 1.4rem;
+  }
 }
